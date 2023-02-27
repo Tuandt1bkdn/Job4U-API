@@ -4,7 +4,8 @@
   "description": "ABCD",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/Tuandt1bkdn/Job4U-API/issues"
   },
-  "homepage": "https://github.com/Tuandt1bkdn/Job4U-API#readme"
+  "homepage": "https://github.com/Tuandt1bkdn/Job4U-API#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql2": "^3.1.2",
+    "nodemon": "^2.0.20",
+    "require": "^2.4.20"
+  }
 }
