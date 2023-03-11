@@ -31,12 +31,12 @@ const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`server is running on port ${port}`));
 
-const connection = require("./Back_End/API/connectdatabase");
+const connection = require("./API/connectdb");
 
 connection.connect(function (err) {
   if (err) throw err;
   console.log("Ket noi MySQL thanh cong");
 });
 
-const route = require("./Back_End/API/routes");
+const route = require("./API/route");
 route(app);
