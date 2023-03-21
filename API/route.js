@@ -18,5 +18,5 @@ module.exports = function (app) {
   app.route("/censorjob").post(OfficeController.postCensorJobs);
 
   //[DELETE]
-  app.route("delete/:id").delete(MarketingController.deleteSavedJob);
+  app.route("/delete/:id").delete(MarketingController.deleteSavedJob);
 };
