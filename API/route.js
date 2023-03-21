@@ -16,4 +16,7 @@ module.exports = function (app) {
   app.route("/savedjob").post(MarketingController.postSavedJob);
   app.route("/officejob").post(OfficeController.postJob);
   app.route("/censorjob").post(OfficeController.postCensorJobs);
+
+  //[DELETE]
+  app.route("delete/:id").delete(MarketingController.deleteSavedJob);
 };

@@ -33,4 +33,14 @@ module.exports = {
       }
     });
   },
+  deleteSavedJob: function (req, res) {
+    let idSavedJob = req.params.id;
+    var sql = `DELETE FROM b9oumdvekl5tcfszxzcm.SavedJob WHERE SavedJob.idSavedJob=${idSavedJob}`;
+    database.query(sql, (err, response) => {
+      if (err) throw err;
+      {
+        res.send("Delete successful !!!");
+      }
+    });
+  },
 };
