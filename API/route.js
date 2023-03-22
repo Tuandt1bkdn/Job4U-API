@@ -3,7 +3,7 @@ const OfficeController = require("./controller/OfficeController/OfficeController
 
 module.exports = function (app) {
   // [GET]
-  app.route("/savedjob").get(MarketingController.getSavedJob);
+  app.route("/savedjob/:email").get(MarketingController.getSavedJob);
   app.route("/censorjob").get(OfficeController.getCensorJobs);
   app.route("/alljob").get(OfficeController.getAllJobs);
   /// [GET] - branch
