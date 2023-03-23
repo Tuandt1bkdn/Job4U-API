@@ -13,11 +13,13 @@ const database = require("../../connectdb");
 
 module.exports = {
   getSavedJob: function (req, res) {
-    var email = req.params.email;
-    var sql = `SELECT * FROM b9oumdvekl5tcfszxzcm.SavedJob WHERE SavedJob.AccountID =${email} `;
+    var mail = req.params.email;
+    console.log("email", mail);
+    var sql = `SELECT * FROM b9oumdvekl5tcfszxzcm.SavedJob WHERE SavedJob.AccountID='${mail}'`;
     database.query(sql, (err, response) => {
       if (err) {
         console.log("Khong the lay du lieu");
+        console.log(err);
       }
       console.log(response);
       res.json(response);
